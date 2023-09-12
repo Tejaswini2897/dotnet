@@ -7,7 +7,7 @@ namespace ProductSupplierAPIs.models
         public SuppilerContext(DbContextOptions<SuppilerContext> options) : base(options)
         {
         }
-        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        /*protected override void OnModelCreating(DbContextOptions<SuppilerContext> modelBuilder)
         {
 
             // configures one-to-many relationship
@@ -15,8 +15,8 @@ namespace ProductSupplierAPIs.models
                 .HasRequired<Product>(s => s.Products)
                 .WithMany(g => g.Supplier)
                 .HasForeignKey<int>(s => s.Products);
-        }
-*/
+        }*/
+
         public DbSet<Supplier> SuppliersItems { get; set; } = null!;
     }
 }
